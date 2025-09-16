@@ -1,12 +1,35 @@
-# React + Vite
+# Alex's Book Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A book discovery app built with React and styled using TailwindCSS. It integrates with the Open Library API to help users find books by it's title.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Frontend**: React
+- **CSS Framework**: TailwindCSS
+- **API**: Open Library API
 
-## Expanding the ESLint configuration
+## Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+You can try out the app live on StackBlitz:
+
+[Check it out on StackBlitz](https://stackblitz.com/~/github.com/mdamill/Alex-s-Book-Finder)
+
+## 📸 Screenshots
+
+### 🌟 Homepage
+
+![Homepage Screenshot](./public/output/home-page.png)
+
+### 🌟 Search Results
+
+![Search Results Screenshot](./public/output/search-results.png)
+
+### 🌟 Book Details
+
+![Book Details Screenshot](./public/output/book-result.png)
+
+### 🌟 Not Found
+
+![Not Found Page Screenshot](./public/output/not-found-page.png)
+
+---
