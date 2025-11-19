@@ -34,7 +34,7 @@ function BookDetails() {
               : coverImg,
           };
 
-          setBook(newBook); // ✅ save book in state
+          setBook(newBook);
         } else {
           setBook(null);
         }
@@ -45,29 +45,19 @@ function BookDetails() {
       setLoading(false);
     };
 
-    getBookDetails(); // ✅ actually call the function
+    getBookDetails();
   }, [id]);
 
   if (loading) {
-<<<<<<< HEAD
     return <Loading />;
-=======
-    return <Loading />; 
->>>>>>> e64003b7f24821a23b9616b039b3ccf8529cea6e
   }
 
   return (
     <section className="p-6 min-h-screen bg-gray-50">
-<<<<<<< HEAD
 
       <button
         onClick={() => navigate(-1)}
         className="flex items-center mb-6"
-=======
-      <button
-        onClick={() => navigate(-1)}
-        className="flex items-center text-blue-600 mb-6"
->>>>>>> e64003b7f24821a23b9616b039b3ccf8529cea6e
       >
         <FaArrowLeft className="mr-2" />
         Back
