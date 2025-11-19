@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
+import missingBook from "../../assets/images/missingbook.jpg"; // ✅ import local fallback image
 
 // Book card component
 const Book = ({ id, author, cover_id, first_publish_year, title }) => {
-  // Build cover image URL or use fallback
+  // ✅ Use local fallback image if no cover_id
   const coverImg = cover_id
     ? `https://covers.openlibrary.org/b/id/${cover_id}-M.jpg`
-    : "https://via.placeholder.com/150x220?text=No+Cover";
+    : missingBook;
 
   return (
-    <Link to={`/book/${id}`} className="block bg-white shadow-md rounded-md overflow-hidden hover:shadow-lg transition">
+    <Link
+      to={`/book/${id}`}
+      className="block bg-white shadow-md rounded-md overflow-hidden hover:shadow-lg transition"
+    >
       <img
         src={coverImg}
         alt={title}
@@ -16,8 +20,12 @@ const Book = ({ id, author, cover_id, first_publish_year, title }) => {
       />
       <div className="p-4">
         <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm text-gray-600">{author ? author.join(", ") : "Unknown Author"}</p>
-        <p className="text-sm text-gray-500">First published: {first_publish_year || "N/A"}</p>
+        <p className="text-sm text-gray-600">
+          {author ? author.join(", ") : "Unknown Author"}
+        </p>
+        <p className="text-sm text-gray-500">
+          First published: {first_publish_year || "N/A"}
+        </p>
       </div>
     </Link>
   );

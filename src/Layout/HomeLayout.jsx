@@ -7,14 +7,18 @@ function HomeLayout() {
     return (
         <div>
 
-            <main className='container'>
+            <main className="min-h-screen flex flex-col">
                 <Header />
-                <Outlet />
+                <div className="flex-grow">
+                    <Outlet />
+                </div>
                 <Footer />
             </main>
+
 
         </div>
     )
 }
 
 export default HomeLayout
+
