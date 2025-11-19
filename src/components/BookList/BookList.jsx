@@ -1,5 +1,6 @@
 import Book from "./Book";
 import { useGlobalContext } from "../../context/AppContext.jsx";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { HiArrowLeft } from "react-icons/hi";
 import Loader from "../Loader/Loader.jsx";
@@ -45,6 +46,33 @@ const BookList = () => {
           Back
         </button>
 
+=======
+
+// BookList component to display multiple books
+const BookList = () => {
+  const { books, loading, resultTitle } = useGlobalContext();
+
+  if (loading) {
+  return (
+    <div className="text-center text-gray-600 text-xl mt-10">
+      Loading books...
+    </div>
+  );
+}
+
+if (!books || books.length === 0) {
+  return (
+    <div className="text-center text-gray-600 text-xl mt-10">
+      {resultTitle || "Search for books above"}
+    </div>
+  );
+}
+
+
+  return (
+    <section className="py-10 bg-gray-50 min-h-screen">
+      <div className="container mx-auto px-6">
+>>>>>>> e64003b7f24821a23b9616b039b3ccf8529cea6e
         <h2 className="text-2xl font-bold mb-6 text-center">{resultTitle}</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {books.map((book) => (
