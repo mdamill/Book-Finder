@@ -57,7 +57,7 @@ function BookDetails() {
 
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center mb-6"
+        className="flex items-center mb-6 cursor-pointer"
       >
         <FaArrowLeft className="mr-2" />
         Back

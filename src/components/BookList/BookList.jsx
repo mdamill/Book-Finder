@@ -39,7 +39,7 @@ const BookList = () => {
         {/* Back arrow */}
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center gap-2 mb-6 text-[#67c4e9] font-medium hover:text-cyan-400 transition duration-300"
+          className="flex items-center gap-2 mb-6 text-[#000] font-medium transition duration-300 cursor-pointer"
         >
           <HiArrowLeft size={22} />
           Back
